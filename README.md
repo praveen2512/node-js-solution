@@ -1,9 +1,6 @@
-# Node.js recruitment task - senior
+# Node.js recruitment task - solution
 
-This repository contains the base code for recruitment exercise. Complete the tasks listed below and publish the solution on your github. Send us a link to your repository at least 1 day before the interview. 
-We will discuss the proposed solution during the interview. You should be ready to present the working application on your local machine.
-
-There is some key features that must be implemented in the recruitment task:
+This repository contains the solution for Node JS assignment. Below features have been implemented. I have implemented the solution with best of my knowledge and it may have few bugs.
 
 - CRUD operations for customers (get, update, delete) by id or email;
 
@@ -12,8 +9,6 @@ There is some key features that must be implemented in the recruitment task:
 - roles USER and ADMIN;
 
 - access token;
-
-- refresh token;
 
 - restrict access to get customers operation from unauthenticated users;
 
