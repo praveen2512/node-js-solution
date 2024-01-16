@@ -1,0 +1,64 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Customer {
+  id: ID!
+
+  """Date and time when object was created."""
+  createdAt: Timestamp!
+
+  """Date and time when the object was updated last time."""
+  updatedAt: Timestamp!
+  email: String!
+  userRole: String!
+}
+
+"""
+`Date` type as integer. Type represents date and time as number of milliseconds from start of UNIX epoch.
+"""
+scalar Timestamp
+
+type Query {
+  customers(data: GetCustomerInput!): [Customer!]!
+  getCustomer(input: CustomerInput!): Customer!
+}
+
+input GetCustomerInput {
+  cursor: String
+  skip: Int
+  take: Int
+  where: WhereCustomerInput
+}
+
+input WhereCustomerInput {
+  id: String
+  email: String
+  userRole: String
+  createdAt: Timestamp
+  updatedAt: Timestamp
+}
+
+input CustomerInput {
+  id: String
+  email: String
+}
+
+type Mutation {
+  addCustomer(data: AddCustomerInput!): Customer!
+  updateCustomer(input: CustomerInput!, data: UpdateCustomerInput!): Customer!
+  deleteCustomer(input: CustomerInput!): Customer!
+}
+
+input AddCustomerInput {
+  email: String!
+  password: String!
+  userRole: String
+}
+
+input UpdateCustomerInput {
+  email: String
+  password: String
+  userRole: String
+  isVerified: Boolean
+}
